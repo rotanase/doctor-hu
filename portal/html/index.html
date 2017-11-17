@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="../js/api_call.js"></script>
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/mystyle.css">
+  </head>
+  <body onload=''>
+    <span>
+      <div class="header">
+        <div class="logo"><i class="fa fa-user-md"></i></div>
+        <div>
+          Doctor  HU
+        </div>
+      </div>
+      <div class="content">
+        <div class="sidebar">
+          <div class="menu-option" onClick=`return make_api_request("weather")`>
+            <i class="fa fa-newspaper-o sidebar-icon"></i>
+            <div class="sidebar-action">New topic</div>
+          </div>
+          <div class="menu-option" onClick=`return make_api_request("location")`>
+            <i class="fa fa-filter sidebar-icon"></i>
+            <div class="sidebar-action">Filter</div>
+          </div>
+        </div>
+        <div class="pannel">
+          <div id="response-box" class="info-box"></div>
+          <div id="line" class="indicator"></div>
+        </div>
+      </div>
+    </span>
+  </body>
+</html>
