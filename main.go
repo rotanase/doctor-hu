@@ -218,9 +218,9 @@ func main() {
 	router.HandleFunc("/questions/{id}", DeleteQuestion).Methods("DELETE")
 
 	router.HandleFunc("/responses", GetResponses).Methods("GET")
-	router.HandleFunc("/responses/{id}", GetQuestion).Methods("GET")
-	router.HandleFunc("/responses/{id}", CreateQuestion).Methods("POST")
-	router.HandleFunc("/responses/{id}", DeleteQuestion).Methods("DELETE")
+	router.HandleFunc("/responses/{id}", GetResponse).Methods("GET")
+	router.HandleFunc("/responses/{id}", CreateResponse).Methods("POST")
+	router.HandleFunc("/responses/{id}", DeleteResponse).Methods("DELETE")
 
 	users = append(users, User{Id: "1", Firstname: "John", Lastname: "Doe", Email: "john.doe@ymail.com", Age: 24, Sex: "male", Diseases: "me doare in gat"})
 	users = append(users, User{Id: "2", Firstname: "Koko", Lastname: "Doe", Email: "koko.doe@gmail.com", Age: 23, Sex: "femele", Diseases: "me supera barbatu"})
