@@ -17,6 +17,7 @@ type User struct {
 	Age       int    `json:"age,omitempty"`
 	Sex       string `json:"sex, omitempty"`
 	Diseases  string `json:"diseases,omitempty"`
+	Password  string `json:"password,omitempty"`
 	// TODO
 	// Questions []*Question `json:"questions,omitempty"`
 	// Responses []*Response `json:"responses,omitempty"`
@@ -32,6 +33,7 @@ type Doctor struct {
 	University string `json:"university,omitempty"`
 	Specialty  string `json:"specialty, omitempty"`
 	Title      string `json:"title, omitempty"`
+	Password   string `json:"password,omitempty"`
 	// TODO
 	// Responses []*Response `json:"responses,omitempty"`
 }
