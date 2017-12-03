@@ -49,9 +49,10 @@ type Response struct {
 }
 
 type Question struct {
-	Id      string `json:"id,omitempty"`
-	User_id string `json:"user_id,omitempty"`
-	Content string `json:"content,omitempty"`
+	Id      string   `json:"id,omitempty"`
+	User_id string   `json:"user_id,omitempty"`
+	Content string   `json:"content,omitempty"`
+	Tags    []string `json:"tags,omitempty"`
 	// TODO
 	// Date_of_creation time   `json:"date_of_creation,omitempty"`
 }
@@ -224,6 +225,7 @@ func main() {
 	router.HandleFunc("/responses/{id}", CreateResponse).Methods("POST")
 	router.HandleFunc("/responses/{id}", DeleteResponse).Methods("DELETE")
 
+	users = append(users, User{Id: "0", Firstname: "Anon", Lastname: "Anonutz", Email: "anon"})
 	users = append(users, User{Id: "1", Firstname: "Ion", Lastname: "Dan", Email: "ion.dan@gmail.com", Age: 24, Sex: "masculin", Diseases: "Ma doare in gat."})
 	users = append(users, User{Id: "2", Firstname: "Maria", Lastname: "Dan", Email: "maryuka@gmail.com", Age: 23, Sex: "feminin", Diseases: "Ma doare stomacul."})
 	users = append(users, User{Id: "3", Firstname: "Marian", Lastname: "Frumosu", Email: "marian@gmail.com", Age: 59, Sex: "masculin", Diseases: "Ma doare spatele."})
